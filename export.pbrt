@@ -1,0 +1,544 @@
+Film "image" "integer xresolution" [1024] "integer yresolution" [768] "string filename" "burj-khalif.png"
+PixelFilter "box" "float xwidth" [0.5] "float ywidth" [0.5] 
+Accelerator "bvh" 
+"string splitmethod" "sah"
+"integer maxnodeprims" [4]
+Sampler "halton"
+"integer pixelsamples" [128]
+"bool samplepixelcenter" "false"
+Integrator "volpath"
+"integer maxdepth" [5]
+Scale -1 1 1 #avoid the 'flipped image' bug..
+LookAt	3000.0 130.0 550.0
+	2999.0 130.0 550.0
+	4.371139183945161e-08 1.9106858886811786e-15 1.0000001192092896
+
+Camera "perspective"
+"float fov" [22.89519204617112]
+
+MakeNamedMedium "fog" 
+        "string type" [ "homogeneous" ] 
+    "rgb sigma_a" [ 0.000005 0.000005 0.000005 ] 
+    "rgb sigma_s" [ 0.00004 0.00004 0.00004 ] 
+
+MediumInterface "" "fog"
+
+
+WorldBegin
+
+# LightSource "infinite" "rgb L" [.4 .45 .5]
+AttributeBegin
+Rotate -2 0 1 0
+LightSource "infinite" "string mapname" "textures/skylight-morn.exr"
+    "rgb L" [1 1 1]
+AttributeEnd
+
+
+AttributeBegin
+Material ""
+MediumInterface "fog" ""
+Shape "sphere" "float radius" [3200]
+AttributeEnd
+
+
+AttributeBegin
+Transform [4.072188 0.000000 0.000000 0.000000 0.000000 -0.000001 4.072188 0.000000 0.000000 -4.072188 -0.000001 0.000000 0.000000 0.000000 0.000000 1.000000 ]
+Include "geometry/building1.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.072188 0.000000 0.000000 0.000000 0.000000 -0.000001 4.072188 0.000000 0.000000 -4.072188 -0.000001 0.000000 0.000000 0.000000 0.000000 1.000000 ]
+Include "geometry/building2.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.072188 0.000000 0.000000 0.000000 0.000000 -0.000001 4.072188 0.000000 0.000000 -4.072188 -0.000001 0.000000 0.000000 0.000000 0.000000 1.000000 ]
+Include "geometry/building3.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550729 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Include "geometry/building4.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_100.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_101.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_102.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_103.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_104.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_105.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_106.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 5.096684 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 416.864929 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_107.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_108.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_109.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_110.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_111.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_112.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_113.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_114.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_115.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_116.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [-2.414290 -2.654736 0.000000 0.000000 -0.000000 0.000000 3.588372 0.000000 -2.654736 2.414290 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]
+"color Kt" [ 0.03995537757873535 0.040984220802783966 0.08922534435987473]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_117.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000000 -0.000000 3.588372 0.000000 -2.368042 -2.696070 -0.000001 0.000000 723.971436 -322.205017 0.000000 1.000000 ]
+Material "metal"
+"color eta" [ 0.04963681846857071 0.04963681846857071 0.04963681846857071]
+"color k" [ 0.06171172112226486 0.06171172112226486 0.06171172112226486]
+"float roughness" [0.6599999666213989]
+"float uroughness" [0.11999999731779099]
+"float vroughness" [0.17999999225139618]
+Include "geometry/geo_118.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240173 -253.753769 0.000000 1.000000 ]
+Material "metal"
+"color eta" [ 0.04963681846857071 0.04963681846857071 0.04963681846857071]
+"color k" [ 0.06171172112226486 0.06171172112226486 0.06171172112226486]
+"float roughness" [0.6599999666213989]
+"float uroughness" [0.11999999731779099]
+"float vroughness" [0.17999999225139618]
+Include "geometry/geo_119.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240234 -253.753784 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_120.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240234 -253.753784 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_121.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240234 -253.753784 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_122.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240234 -253.753784 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_123.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240234 -253.753784 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 0.800000011920929 0.800000011920929 0.800000011920929]
+"color Kt" [ 0.03995537757873535 0.040984220802783966 0.08922534435987473]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_124.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [4.095707 -1.117476 0.000000 0.000000 -0.000000 -0.000001 4.245418 0.000000 -1.117476 -4.095707 -0.000001 0.000000 642.240234 -253.753784 0.000000 1.000000 ]
+Material "metal"
+"color eta" [ 0.04963681846857071 0.04963681846857071 0.04963681846857071]
+"color k" [ 0.06171172112226486 0.06171172112226486 0.06171172112226486]
+"float roughness" [0.6599999666213989]
+"float uroughness" [0.11999999731779099]
+"float vroughness" [0.17999999225139618]
+Include "geometry/geo_125.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Include "geometry/geo_126.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_127.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_128.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_129.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_130.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_131.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_132.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_133.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [6.550728 0.273095 0.000000 0.000000 0.000000 -0.000001 4.445683 0.000000 0.108346 -2.598893 -0.000000 0.000000 -240.967453 467.244965 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_134.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [-0.014603 -0.001042 0.000000 0.000000 0.001042 -0.014603 -0.000034 0.000000 0.000003 -0.000045 0.019499 0.000000 157.535507 -244.894073 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 0.5419955253601074 0.5419955253601074 0.5419955253601074]
+"color Kt" [ 0.43324291706085205 0.43324291706085205 0.43324291706085205]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_135.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [0.141165 -0.106109 0.000000 0.000000 0.088535 0.117785 0.000000 0.000000 0.000000 0.000000 0.349958 0.000000 614.568176 288.277863 106.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.2675570845603943 0.2675570845603943 0.2675570845603943]
+Include "geometry/geo_136.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [0.141165 -0.106109 0.000000 0.000000 0.088535 0.117785 0.000000 0.000000 0.000000 0.000000 0.349958 0.000000 614.568176 288.277863 106.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_137.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [0.141165 -0.106109 0.000000 0.000000 0.088535 0.117785 0.000000 0.000000 0.000000 0.000000 0.349958 0.000000 614.568176 288.277863 106.000000 1.000000 ]
+Material "metal"
+"color eta" [ 0.2100597620010376 0.2100597620010376 0.2100597620010376]
+"color k" [ 0.25879478454589844 0.25879478454589844 0.25879478454589844]
+"float roughness" [0.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+Include "geometry/geo_138.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629700 193.945099 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.1921691745519638 0.20635129511356354 0.27036014199256897]
+Include "geometry/geo_139.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_140.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_141.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_142.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "glass"
+"color Kr" [ 1.0 1.0 1.0]
+"color Kt" [ 1.0 1.0 1.0]
+"float uroughness" [0.0]
+"float vroughness" [0.0]
+"float index" [1.3329999446868896]
+Include "geometry/geo_143.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_144.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_145.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_146.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Material "matte"
+"float sigma" [0.0]
+"color Kd" [ 0.052728813141584396 0.06148800626397133 0.08109903335571289]
+Include "geometry/geo_147.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [-2.414290 -2.654736 0.000000 0.000000 -0.000001 0.000000 5.232701 0.000000 -2.654736 2.414290 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Include "geometry/building51.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [2.696070 -2.368042 0.000000 0.000000 -0.000001 -0.000001 5.232701 0.000000 -2.368042 -2.696070 -0.000001 0.000000 -532.629639 193.945099 0.000000 1.000000 ]
+Include "geometry/building52.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [-1138.250244 0.000000 0.000000 0.000000 0.000000 -1138.250244 0.000000 0.000000 0.000000 0.000000 -1138.250244 0.000000 -5.562796 -3.420868 15.671850 1.000000 ]
+Include "geometry/building53.pbrt"
+AttributeEnd
+
+AttributeBegin
+Transform [-9124.073242 0.000000 0.000000 0.000000 0.000000 -2867.273193 0.000000 0.000000 0.000000 0.000000 -96.090439 0.000000 -931.240479 0.143349 200.388153 1.000000 ]
+Include "geometry/building54.pbrt"
+AttributeEnd
+
+WorldEnd
+
