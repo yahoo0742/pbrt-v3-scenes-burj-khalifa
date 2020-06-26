@@ -1,0 +1,12 @@
+MakeNamedMedium "gradientFog" 
+        "integer nx" [ 1 ] 
+        "integer ny" [ 1 ] 
+        "integer nz" [ 3 ] 
+ "point p0" [ 0.0 0.0 0.0 ] "point p1" [1 1 1 ] 
+
+"float density" [ 
+0.01,
+0.1,
+0.4
+] 
+"string type" [ "heterogeneous" ] 
