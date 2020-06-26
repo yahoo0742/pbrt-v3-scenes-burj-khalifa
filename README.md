@@ -1,6 +1,8 @@
 CGRA408 2020T1 Final project
 
-This work of this project is based on pbrt library. It is rendering buildings with a infinite area light from a environment map of skylight, which is generated with the Hosek-Wilki model.
+Anna Stangnes, Marc Gluyas, Wenbo Feng 
+
+The work of this project is based on pbrt library. It is rendering buildings with an infinite area light from an environment map of skylight, which is generated with the Hosek-Wilki model.
 
 To run the project, you should have node installed.
 1. copy src/imgtool.cpp to pbrt-v3/src/tools/ to override the existing imgtool.cpp file.
